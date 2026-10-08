@@ -1,0 +1,109 @@
+:root {
+  --bg: #0a1020;
+  --surface: #121a30;
+  --border: #243152;
+  --text: #e6ecff;
+  --muted: #93a1c7;
+  --accent: #4fd1c5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 16px;
+}
+
+.stage {
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 1.75rem;
+  letter-spacing: 0.04em;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  background: #050914;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+}
+
+.panel {
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+.panel h2 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.panel h2:not(:first-child) {
+  margin-top: 20px;
+}
+
+.panel p,
+.panel ul {
+  margin: 0;
+  color: var(--muted);
+}
+
+.panel ul {
+  padding-left: 18px;
+}
+
+.controls {
+  margin: 12px 0 0;
+}
+
+.controls div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.controls dt {
+  font-weight: 700;
+}
+
+.controls dd {
+  margin: 0;
+  color: var(--muted);
+  text-align: right;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

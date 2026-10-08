@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Space Defender</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="layout">
+  <section class="stage">
+    <h1>Space Defender</h1>
+    <canvas id="game" width="480" height="640" aria-label="Space Defender game board"></canvas>
+  </section>
+  <aside class="panel">
+    <h2>How to play</h2>
+    <p>Shoot down the invaders before they reach the bottom. Reach 1500 points to win.</p>
+    <dl class="controls">
+      <div><dt>Move</dt><dd>Left / Right arrows or A / D</dd></div>
+      <div><dt>Shoot</dt><dd>Space (hold to keep firing)</dd></div>
+      <div><dt>Pause</dt><dd>P</dd></div>
+      <div><dt>Start / Restart</dt><dd>Enter</dd></div>
+    </dl>
+    <h2>Rules</h2>
+    <ul>
+      <li>You have 3 lives.</li>
+      <li>You lose a life when an invader hits your ship or escapes past the bottom.</li>
+      <li>Red invaders are worth 10 points. Purple zig-zag invaders are worth 25.</li>
+      <li>Every 200 points raises the level and makes invaders faster.</li>
+    </ul>
+  </aside>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
